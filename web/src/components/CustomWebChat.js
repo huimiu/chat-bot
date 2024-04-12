@@ -1,13 +1,14 @@
 import React from "react";
 import { Components } from "botframework-webchat-component";
+import "../styles/CustomWebChat.css";
 
 const CustomWebChat = () => {
   return (
-    <Components.AccessKeySinkSurface>
+    <Components.AccessKeySinkSurface className='chat-container'>
       <Components.BasicToaster />
-      <Components.BasicTranscript />
+      <Components.BasicTranscript className='transcript-container' />
       <Components.BasicConnectivityStatus />
-      <Components.BasicSendBox />
+      <Components.BasicSendBox className='send-box' />
     </Components.AccessKeySinkSurface>
   );
 };

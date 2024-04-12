@@ -1,0 +1,15 @@
+.chat-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 600px;
+  background-color: #f9f9f9;
+}
+
+.transcript-container {
+  height: 100%;
+}
+
+.send-box {
+  border: 1px solid #ccc;
+}

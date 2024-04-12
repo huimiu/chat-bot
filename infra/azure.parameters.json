@@ -18,7 +18,7 @@
       "value": "chat-bot"
     },
     "azureOpenAIKey": {
-      "value": "${{SECRET_AZURE_OPENAI_KEY}}"
+      "value": "${{SECRET_AZURE_OPENAI_API_KEY}}"
     },
     "azureOpenAIEndpoint": {
       "value": "${{AZURE_OPENAI_ENDPOINT}}"

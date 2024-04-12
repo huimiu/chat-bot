@@ -12,16 +12,15 @@
 
 The following files can be customized and demonstrate an example implementation to get you started.
 
-| File                              | Contents                                                                                           |
-| --------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `bot/index.js`                    | Sets up and configures the AI Chat Bot.                                                            |
-| `bot/app.js`                      | Handles business logics for the AI Chat Bot.                                                       |
-| `bot/config.js`                   | Defines the environment variables.                                                                 |
-| `bot/prompts/chat/skprompt.txt`   | Defines the prompt.                                                                                |
-| `bot/prompts/chat/config.json`    | Configures the prompt.                                                                             |
-| `web/src/App.js`                  | The main component of the React application. It sets up the routing and main layout of the web UI. |
-| `web/src/index.js`                | The entry point for the React application. It renders the App component into the DOM.              |
-| `web/src/services/chatService.js` | This service handles the communication with the chatbot backend.                                   |
+| File                            | Contents                                                                                           |
+| ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `bot/index.js`                  | Sets up and configures the AI Chat Bot.                                                            |
+| `bot/app.js`                    | Handles business logics for the AI Chat Bot.                                                       |
+| `bot/config.js`                 | Defines the environment variables.                                                                 |
+| `bot/prompts/chat/skprompt.txt` | Defines the prompt.                                                                                |
+| `bot/prompts/chat/config.json`  | Configures the prompt.                                                                             |
+| `web/src/App.js`                | The main component of the React application. It sets up the routing and main layout of the web UI. |
+| `web/src/index.js`              | The entry point for the React application. It renders the App component into the DOM.              |
 
 ## Testing this sample
 

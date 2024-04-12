@@ -1,7 +1,7 @@
+import React from "react";
 import { createDirectLine } from "botframework-webchat";
 import { Components } from "botframework-webchat-component";
-import React from "react";
-import CustomWebChat from "./CustomWebChat";
+import CustomWebChat from "./components/CustomWebChat";
 
 // This is a sample demo, You should NEVER put the Direct Line secret in the browser or client app.
 // To talk to your bot, you should use the token exchanged using your Direct Line secret.
@@ -18,7 +18,6 @@ async function getDirectLineToken() {
     }
   );
   const { token } = await res.json();
-
   return token;
 }
 
