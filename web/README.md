@@ -2,6 +2,8 @@
 
 1. Before running the app, you need to start the bot server.
 
-2. Run `npm run start` to start the app.
+2. Run `npm install` to install the dependencies.
 
-3. The app will automatically open in your default browser, if not, you can manually open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Run `npm run start` to start the app.
+
+4. The app will automatically open in your default browser, if not, you can manually open [http://localhost:3000](http://localhost:3000) to view it in your browser.
