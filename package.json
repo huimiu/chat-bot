@@ -1,0 +1,30 @@
+{
+  "name": "chat-bot",
+  "version": "1.0.0",
+  "msteams": {
+    "teamsAppId": null
+  },
+  "description": "The backend for the web chat bot",
+  "engines": {
+    "node": "18 || 20"
+  },
+  "author": "Microsoft",
+  "license": "MIT",
+  "main": "./bot/index.js",
+  "scripts": {
+    "dev:teamsfx": "env-cmd --silent -f .localConfigs npm run dev",
+    "dev": "nodemon --inspect=9239 --signal SIGINT ./bot/index.js",
+    "start": "node ./bot/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --exec \"npm run start\""
+  },
+  "dependencies": {
+    "@microsoft/teams-ai": "^1.0.0",
+    "botbuilder": "^4.20.0",
+    "restify": "^10.0.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
