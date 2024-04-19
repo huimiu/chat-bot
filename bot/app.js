@@ -1,4 +1,4 @@
-const { MemoryStorage } = require("botbuilder");
+const { MemoryStorage, MessageFactory } = require("botbuilder");
 const path = require("path");
 const config = require("./config");
 
@@ -39,6 +39,47 @@ const app = new Application({
   ai: {
     planner,
   },
+});
+
+app.message(/static/i, async (context, _state) => {
+  const { CardFactory } = require("botbuilder");
+  await context.sendActivity(
+    MessageFactory.attachment(
+      CardFactory.adaptiveCard({
+        type: "AdaptiveCard",
+        version: "1.0",
+        body: [
+          {
+            type: "TextBlock",
+            text: "coffee",
+            size: "large",
+          },
+          {
+            type: "FactSet",
+            facts: [
+              {
+                title: "coffee type",
+                value: "'drip'",
+              },
+              {
+                title: "size",
+                value: "'large'",
+              },
+              {
+                title: "milk",
+                value: "'whole'",
+              },
+              {
+                title: "number of shots",
+                value: "'1'",
+              },
+            ],
+          },
+        ],
+        $schema: "http://adaptivecards.io/schemas/adaptive-card.json",
+      })
+    )
+  );
 });
 
 module.exports = app;
