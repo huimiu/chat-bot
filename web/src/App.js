@@ -38,18 +38,18 @@ const App = () => {
 
   return (
     // We are using the "Composer" component here, which all descendants will have access to the Web Chat API by HOC-ing thru "connectToWebChat".
-    // <React.Fragment>
-    //   {!!directLine && (
-    //     <Components.Composer directLine={directLine}>
-    //       <CustomWebChat />
-    //     </Components.Composer>
-    //   )}
-    // </React.Fragment>
+    <React.Fragment>
+      {!!directLine && (
+        <Components.Composer directLine={directLine}>
+          <CustomWebChat />
+        </Components.Composer>
+      )}
+    </React.Fragment>
 
     // If you are not using Composer, you can use the "connectToWebChat" HOC directly.
-    <React.Fragment>
-      {!!directLine && <WebChat directLine={directLine} />}
-    </React.Fragment>
+    // <React.Fragment>
+    //   {!!directLine && <WebChat directLine={directLine} />}
+    // </React.Fragment>
   );
 };
 
