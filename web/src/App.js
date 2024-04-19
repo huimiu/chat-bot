@@ -2,6 +2,7 @@ import React from "react";
 import { createDirectLine } from "botframework-webchat";
 import { Components } from "botframework-webchat-component";
 import CustomWebChat from "./components/CustomWebChat";
+import WebChat from "./WebChat";
 
 // This is a sample demo, You should NEVER put the Direct Line secret in the browser or client app.
 // To talk to your bot, you should use the token exchanged using your Direct Line secret.
@@ -37,12 +38,17 @@ const App = () => {
 
   return (
     // We are using the "Composer" component here, which all descendants will have access to the Web Chat API by HOC-ing thru "connectToWebChat".
+    // <React.Fragment>
+    //   {!!directLine && (
+    //     <Components.Composer directLine={directLine}>
+    //       <CustomWebChat />
+    //     </Components.Composer>
+    //   )}
+    // </React.Fragment>
+
+    // If you are not using Composer, you can use the "connectToWebChat" HOC directly.
     <React.Fragment>
-      {!!directLine && (
-        <Components.Composer directLine={directLine}>
-          <CustomWebChat />
-        </Components.Composer>
-      )}
+      {!!directLine && <WebChat directLine={directLine} />}
     </React.Fragment>
   );
 };
